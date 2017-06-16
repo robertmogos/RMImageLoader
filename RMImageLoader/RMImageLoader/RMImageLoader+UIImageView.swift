@@ -46,8 +46,6 @@ extension UIImageView {
         self?.image = $0
         self?.urlLoaded = true
       }
-      }, failure: {
-        print($0)
     })
   }
   

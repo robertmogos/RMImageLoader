@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'RMImageLoader'
     s.module_name = 'RMImageLoader'
-    s.version = '0.1'
+    s.version = '0.1.1'
     s.license = 'MIT'
     s.summary = 'Async image loading'
     s.homepage = 'https://github.com/robertmogos/RMImageLoader'
