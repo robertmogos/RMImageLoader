@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20A3E9B963F4C7536832E75B /* Pods_RMImageLoaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3079B1A2A12EF8E94CA91C46 /* Pods_RMImageLoaderTests.framework */; };
+		6D592361897E89DF5C8FC0C7 /* Pods_RMImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D35C6B6CD01324E9E316B7 /* Pods_RMImageLoader.framework */; };
+		902488721EEED4C200AFC34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902488711EEED4C200AFC34E /* AppDelegate.swift */; };
+		902488791EEED4C200AFC34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902488781EEED4C200AFC34E /* Assets.xcassets */; };
+		902488871EEED4C300AFC34E /* RMImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902488861EEED4C300AFC34E /* RMImageLoaderTests.swift */; };
+		90700DBC1EEED8C1001191E9 /* RMImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90700DBB1EEED8C1001191E9 /* RMImageLoader.swift */; };
+		90700DBE1EEEDB51001191E9 /* Retriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90700DBD1EEEDB51001191E9 /* Retriever.swift */; };
+		90700DC01EEEF0E2001191E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90700DBF1EEEF0E2001191E9 /* LaunchScreen.storyboard */; };
+		90700DC21EEEFB5C001191E9 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90700DC11EEEFB5C001191E9 /* Subscription.swift */; };
+		90B6B64E1EF2CD5A00A6814B /* MockRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6B64D1EF2CD5A00A6814B /* MockRetriever.swift */; };
+		90B6B64F1EF2CD9B00A6814B /* RMImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90700DBB1EEED8C1001191E9 /* RMImageLoader.swift */; };
+		90B6B6501EF2CDA300A6814B /* Retriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90700DBD1EEEDB51001191E9 /* Retriever.swift */; };
+		90B6B6511EF2CE2300A6814B /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90700DC11EEEFB5C001191E9 /* Subscription.swift */; };
+		90B6B6551EF2D07200A6814B /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B6B6531EF2D07200A6814B /* img1.png */; };
+		90B6B6561EF2D07200A6814B /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B6B6541EF2D07200A6814B /* img2.png */; };
+		90B6B6581EF2DD4E00A6814B /* RMImageLoader+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6B6571EF2DD4E00A6814B /* RMImageLoader+UIImageView.swift */; };
+		90B6B65C1EF30D9000A6814B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6B65B1EF30D9000A6814B /* ViewController.swift */; };
+		90B6B6601EF30E7600A6814B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6B65E1EF30E7600A6814B /* ImageCell.swift */; };
+		90B6B6611EF30E7600A6814B /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90B6B65F1EF30E7600A6814B /* ImageCell.xib */; };
+		90B6B6701EF424A400A6814B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6B66F1EF424A400A6814B /* Result.swift */; };
+		90B6B6711EF44C7200A6814B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6B66F1EF424A400A6814B /* Result.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		902488831EEED4C200AFC34E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 902488661EEED4C200AFC34E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9024886D1EEED4C200AFC34E;
+			remoteInfo = RMImageLoader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3079B1A2A12EF8E94CA91C46 /* Pods_RMImageLoaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMImageLoaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3467C759CCA89FF7A0DEF14B /* Pods-RMImageLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMImageLoader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMImageLoader/Pods-RMImageLoader.debug.xcconfig"; sourceTree = "<group>"; };
+		620ABF051F619CE50338CEC8 /* Pods-RMImageLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMImageLoaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMImageLoaderTests/Pods-RMImageLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		9024886E1EEED4C200AFC34E /* RMImageLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMImageLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		902488711EEED4C200AFC34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		902488781EEED4C200AFC34E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9024887D1EEED4C200AFC34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		902488821EEED4C200AFC34E /* RMImageLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMImageLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		902488861EEED4C300AFC34E /* RMImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMImageLoaderTests.swift; sourceTree = "<group>"; };
+		902488881EEED4C300AFC34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90700DBB1EEED8C1001191E9 /* RMImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMImageLoader.swift; path = RMImageLoader/RMImageLoader.swift; sourceTree = "<group>"; };
+		90700DBD1EEEDB51001191E9 /* Retriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retriever.swift; path = RMImageLoader/Retriever.swift; sourceTree = "<group>"; };
+		90700DBF1EEEF0E2001191E9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90700DC11EEEFB5C001191E9 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		90B6B64D1EF2CD5A00A6814B /* MockRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRetriever.swift; sourceTree = "<group>"; };
+		90B6B6531EF2D07200A6814B /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img1.png; path = assets/img1.png; sourceTree = "<group>"; };
+		90B6B6541EF2D07200A6814B /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img2.png; path = assets/img2.png; sourceTree = "<group>"; };
+		90B6B6571EF2DD4E00A6814B /* RMImageLoader+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RMImageLoader+UIImageView.swift"; sourceTree = "<group>"; };
+		90B6B65B1EF30D9000A6814B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Example/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		90B6B65E1EF30E7600A6814B /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = Example/ImageCell.swift; sourceTree = SOURCE_ROOT; };
+		90B6B65F1EF30E7600A6814B /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageCell.xib; path = Example/ImageCell.xib; sourceTree = SOURCE_ROOT; };
+		90B6B66F1EF424A400A6814B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A866A7C482A47ABA08A31EB2 /* Pods-RMImageLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMImageLoader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMImageLoader/Pods-RMImageLoader.release.xcconfig"; sourceTree = "<group>"; };
+		D96F2C1F0685B37EE4E979BC /* Pods-RMImageLoaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMImageLoaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMImageLoaderTests/Pods-RMImageLoaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6D35C6B6CD01324E9E316B7 /* Pods_RMImageLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMImageLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9024886B1EEED4C200AFC34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D592361897E89DF5C8FC0C7 /* Pods_RMImageLoader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9024887F1EEED4C200AFC34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20A3E9B963F4C7536832E75B /* Pods_RMImageLoaderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C69D87A37D9784FACA2A3B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3467C759CCA89FF7A0DEF14B /* Pods-RMImageLoader.debug.xcconfig */,
+				A866A7C482A47ABA08A31EB2 /* Pods-RMImageLoader.release.xcconfig */,
+				D96F2C1F0685B37EE4E979BC /* Pods-RMImageLoaderTests.debug.xcconfig */,
+				620ABF051F619CE50338CEC8 /* Pods-RMImageLoaderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		902488651EEED4C200AFC34E = {
+			isa = PBXGroup;
+			children = (
+				90700DBF1EEEF0E2001191E9 /* LaunchScreen.storyboard */,
+				902488701EEED4C200AFC34E /* RMImageLoader */,
+				902488851EEED4C300AFC34E /* RMImageLoaderTests */,
+				9024886F1EEED4C200AFC34E /* Products */,
+				6C69D87A37D9784FACA2A3B6 /* Pods */,
+				BF9A21DE002FD9BDA7D44D92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9024886F1EEED4C200AFC34E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9024886E1EEED4C200AFC34E /* RMImageLoader.app */,
+				902488821EEED4C200AFC34E /* RMImageLoaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		902488701EEED4C200AFC34E /* RMImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				90B6B65D1EF30E5300A6814B /* Example */,
+				90700DBA1EEED8A4001191E9 /* RMImageLoader */,
+				902488711EEED4C200AFC34E /* AppDelegate.swift */,
+				902488781EEED4C200AFC34E /* Assets.xcassets */,
+				9024887D1EEED4C200AFC34E /* Info.plist */,
+			);
+			path = RMImageLoader;
+			sourceTree = "<group>";
+		};
+		902488851EEED4C300AFC34E /* RMImageLoaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				90B6B6521EF2CE7B00A6814B /* assets */,
+				90B6B64D1EF2CD5A00A6814B /* MockRetriever.swift */,
+				902488861EEED4C300AFC34E /* RMImageLoaderTests.swift */,
+				902488881EEED4C300AFC34E /* Info.plist */,
+			);
+			path = RMImageLoaderTests;
+			sourceTree = "<group>";
+		};
+		90700DBA1EEED8A4001191E9 /* RMImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				90700DBB1EEED8C1001191E9 /* RMImageLoader.swift */,
+				90700DBD1EEEDB51001191E9 /* Retriever.swift */,
+				90700DC11EEEFB5C001191E9 /* Subscription.swift */,
+				90B6B6571EF2DD4E00A6814B /* RMImageLoader+UIImageView.swift */,
+				90B6B66F1EF424A400A6814B /* Result.swift */,
+			);
+			name = RMImageLoader;
+			sourceTree = "<group>";
+		};
+		90B6B6521EF2CE7B00A6814B /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				90B6B6531EF2D07200A6814B /* img1.png */,
+				90B6B6541EF2D07200A6814B /* img2.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		90B6B65D1EF30E5300A6814B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				90B6B65B1EF30D9000A6814B /* ViewController.swift */,
+				90B6B65E1EF30E7600A6814B /* ImageCell.swift */,
+				90B6B65F1EF30E7600A6814B /* ImageCell.xib */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		BF9A21DE002FD9BDA7D44D92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6D35C6B6CD01324E9E316B7 /* Pods_RMImageLoader.framework */,
+				3079B1A2A12EF8E94CA91C46 /* Pods_RMImageLoaderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9024886D1EEED4C200AFC34E /* RMImageLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9024888B1EEED4C300AFC34E /* Build configuration list for PBXNativeTarget "RMImageLoader" */;
+			buildPhases = (
+				2F0F109CAEA35C7083344F5B /* [CP] Check Pods Manifest.lock */,
+				9024886A1EEED4C200AFC34E /* Sources */,
+				9024886B1EEED4C200AFC34E /* Frameworks */,
+				9024886C1EEED4C200AFC34E /* Resources */,
+				B5742042B7734C67D31F8985 /* [CP] Embed Pods Frameworks */,
+				7F9C1F190BAEA6DF9556FA0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RMImageLoader;
+			productName = RMImageLoader;
+			productReference = 9024886E1EEED4C200AFC34E /* RMImageLoader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		902488811EEED4C200AFC34E /* RMImageLoaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9024888E1EEED4C300AFC34E /* Build configuration list for PBXNativeTarget "RMImageLoaderTests" */;
+			buildPhases = (
+				6876BA32485DE713B259138B /* [CP] Check Pods Manifest.lock */,
+				9024887E1EEED4C200AFC34E /* Sources */,
+				9024887F1EEED4C200AFC34E /* Frameworks */,
+				902488801EEED4C200AFC34E /* Resources */,
+				2242BDC232E7A91DE8C3EFF9 /* [CP] Embed Pods Frameworks */,
+				783F474C87F215A7156FAFF8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				902488841EEED4C200AFC34E /* PBXTargetDependency */,
+			);
+			name = RMImageLoaderTests;
+			productName = RMImageLoaderTests;
+			productReference = 902488821EEED4C200AFC34E /* RMImageLoaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		902488661EEED4C200AFC34E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Robert D. Mogos";
+				TargetAttributes = {
+					9024886D1EEED4C200AFC34E = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					902488811EEED4C200AFC34E = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9024886D1EEED4C200AFC34E;
+					};
+				};
+			};
+			buildConfigurationList = 902488691EEED4C200AFC34E /* Build configuration list for PBXProject "RMImageLoader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 902488651EEED4C200AFC34E;
+			productRefGroup = 9024886F1EEED4C200AFC34E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9024886D1EEED4C200AFC34E /* RMImageLoader */,
+				902488811EEED4C200AFC34E /* RMImageLoaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9024886C1EEED4C200AFC34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B6B6611EF30E7600A6814B /* ImageCell.xib in Resources */,
+				90700DC01EEEF0E2001191E9 /* LaunchScreen.storyboard in Resources */,
+				902488791EEED4C200AFC34E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		902488801EEED4C200AFC34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B6B6561EF2D07200A6814B /* img2.png in Resources */,
+				90B6B6551EF2D07200A6814B /* img1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2242BDC232E7A91DE8C3EFF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RMImageLoaderTests/Pods-RMImageLoaderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F0F109CAEA35C7083344F5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6876BA32485DE713B259138B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		783F474C87F215A7156FAFF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RMImageLoaderTests/Pods-RMImageLoaderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F9C1F190BAEA6DF9556FA0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RMImageLoader/Pods-RMImageLoader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5742042B7734C67D31F8985 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RMImageLoader/Pods-RMImageLoader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9024886A1EEED4C200AFC34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B6B65C1EF30D9000A6814B /* ViewController.swift in Sources */,
+				90B6B6601EF30E7600A6814B /* ImageCell.swift in Sources */,
+				90700DBC1EEED8C1001191E9 /* RMImageLoader.swift in Sources */,
+				90700DBE1EEEDB51001191E9 /* Retriever.swift in Sources */,
+				902488721EEED4C200AFC34E /* AppDelegate.swift in Sources */,
+				90B6B6581EF2DD4E00A6814B /* RMImageLoader+UIImageView.swift in Sources */,
+				90B6B6701EF424A400A6814B /* Result.swift in Sources */,
+				90700DC21EEEFB5C001191E9 /* Subscription.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9024887E1EEED4C200AFC34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B6B6711EF44C7200A6814B /* Result.swift in Sources */,
+				90B6B64E1EF2CD5A00A6814B /* MockRetriever.swift in Sources */,
+				90B6B6511EF2CE2300A6814B /* Subscription.swift in Sources */,
+				90B6B64F1EF2CD9B00A6814B /* RMImageLoader.swift in Sources */,
+				90B6B6501EF2CDA300A6814B /* Retriever.swift in Sources */,
+				902488871EEED4C300AFC34E /* RMImageLoaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		902488841EEED4C200AFC34E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9024886D1EEED4C200AFC34E /* RMImageLoader */;
+			targetProxy = 902488831EEED4C200AFC34E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		902488891EEED4C300AFC34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9024888A1EEED4C300AFC34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9024888C1EEED4C300AFC34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3467C759CCA89FF7A0DEF14B /* Pods-RMImageLoader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RMImageLoader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-mogos.RMImageLoader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9024888D1EEED4C300AFC34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A866A7C482A47ABA08A31EB2 /* Pods-RMImageLoader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RMImageLoader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-mogos.RMImageLoader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9024888F1EEED4C300AFC34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D96F2C1F0685B37EE4E979BC /* Pods-RMImageLoaderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RMImageLoaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-mogos.RMImageLoaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMImageLoader.app/RMImageLoader";
+			};
+			name = Debug;
+		};
+		902488901EEED4C300AFC34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620ABF051F619CE50338CEC8 /* Pods-RMImageLoaderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RMImageLoaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-mogos.RMImageLoaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMImageLoader.app/RMImageLoader";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		902488691EEED4C200AFC34E /* Build configuration list for PBXProject "RMImageLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				902488891EEED4C300AFC34E /* Debug */,
+				9024888A1EEED4C300AFC34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9024888B1EEED4C300AFC34E /* Build configuration list for PBXNativeTarget "RMImageLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9024888C1EEED4C300AFC34E /* Debug */,
+				9024888D1EEED4C300AFC34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9024888E1EEED4C300AFC34E /* Build configuration list for PBXNativeTarget "RMImageLoaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9024888F1EEED4C300AFC34E /* Debug */,
+				902488901EEED4C300AFC34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 902488661EEED4C200AFC34E /* Project object */;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="gTV-IL-0wX" customClass="ImageCell" customModule="RMImageLoader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="286" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="161"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztG-bl-PXG">
+                        <rect key="frame" x="0.0" y="0.0" width="286" height="161"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ztG-bl-PXG" secondAttribute="trailing" id="Cjr-hs-m1M"/>
+                <constraint firstItem="ztG-bl-PXG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OPs-NN-hEF"/>
+                <constraint firstAttribute="bottom" secondItem="ztG-bl-PXG" secondAttribute="bottom" id="Sz9-x2-XS3"/>
+                <constraint firstItem="ztG-bl-PXG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eif-3b-n8W"/>
+            </constraints>
+            <size key="customSize" width="286" height="161"/>
+            <connections>
+                <outlet property="imageView" destination="ztG-bl-PXG" id="Mci-go-hZb"/>
+            </connections>
+            <point key="canvasLocation" x="169" y="36.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
