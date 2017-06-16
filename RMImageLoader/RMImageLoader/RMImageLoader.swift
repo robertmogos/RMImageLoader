@@ -19,7 +19,7 @@ public typealias Failure = (Error) -> ()
 ///
 /// Improvements: add a memory cache at this layer <URL, Image>
 /// to avoid converting from Data to Image every time
-class RMImageLoader {
+public class RMImageLoader {
   
   private enum Constants {
     static let queue = "com.robert-mogos.loader"

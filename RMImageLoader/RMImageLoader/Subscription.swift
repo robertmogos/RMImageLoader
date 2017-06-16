@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Subscription {
+public struct Subscription {
   weak var subscriber: AnyObject?
   let completion: RetrieverCompletion
   

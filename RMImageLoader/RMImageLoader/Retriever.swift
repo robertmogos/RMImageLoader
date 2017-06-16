@@ -19,7 +19,7 @@ public protocol Retrieve {
 
 /// Class for fetching data.
 /// Multiple subscribers can attach to the same URL in order to avoid re-downloading the same content
-class Retriever: Retrieve {
+public class Retriever: Retrieve {
   private enum Constants {
     static let queue = "com.robert-mogos.retriever"
     static let diskPath = "com.robert-mogos.cache"
