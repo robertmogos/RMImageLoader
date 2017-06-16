@@ -41,7 +41,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
   
   override internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCell, for: indexPath) as! ImageCell
-    //cell.load(withURL: photos[indexPath.row])
+    cell.load(withURL: photos[indexPath.row])
     return cell
   }
   

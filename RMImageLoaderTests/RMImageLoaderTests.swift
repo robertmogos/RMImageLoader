@@ -42,7 +42,7 @@ class RMImageLoaderTests: XCTestCase {
     let url = RMImageLoaderTests.getImageURL(named: imageName)
     let image = RMImageLoaderTests.getImage(named: imageName)
     
-    imageLoader.loadImage(url: url!, subscriber: self, success: {
+    imageLoader.loadImage(url: url!, for: self, success: {
       XCTAssertEqual(UIImagePNGRepresentation($0), UIImagePNGRepresentation(image!))
       expectation.fulfill()
     })
@@ -57,13 +57,13 @@ class RMImageLoaderTests: XCTestCase {
     let url = RMImageLoaderTests.getImageURL(named: imageName)
     let image = RMImageLoaderTests.getImage(named: imageName)
     
-    imageLoader.loadImage(url: url!, subscriber: self, success: {
+    imageLoader.loadImage(url: url!, for: self, success: {
       XCTAssertEqual(UIImagePNGRepresentation($0), UIImagePNGRepresentation(image!))
       expSubscriber1.fulfill()
     })
     
     let tmpOwner = UIImageView()
-    imageLoader.loadImage(url: url!, subscriber: tmpOwner, success: {
+    imageLoader.loadImage(url: url!, for: tmpOwner, success: {
       XCTAssertEqual(UIImagePNGRepresentation($0), UIImagePNGRepresentation(image!))
       expSubscriber2.fulfill()
     })
@@ -78,7 +78,7 @@ class RMImageLoaderTests: XCTestCase {
     let url1 = RMImageLoaderTests.getImageURL(named: imageName1)
     let image1 = RMImageLoaderTests.getImage(named: imageName1)
     
-    imageLoader.loadImage(url: url1!, subscriber: self, success: {
+    imageLoader.loadImage(url: url1!, for: self, success: {
       XCTAssertEqual(UIImagePNGRepresentation($0), UIImagePNGRepresentation(image1!))
       expSubscriber1.fulfill()
     })
@@ -88,7 +88,7 @@ class RMImageLoaderTests: XCTestCase {
     let image2 = RMImageLoaderTests.getImage(named: imageName2)
     
     
-    imageLoader.loadImage(url: url2!, subscriber: self, success: {
+    imageLoader.loadImage(url: url2!, for: self, success: {
       XCTAssertEqual(UIImagePNGRepresentation($0), UIImagePNGRepresentation(image2!))
       expSubscriber2.fulfill()
     })
@@ -97,7 +97,7 @@ class RMImageLoaderTests: XCTestCase {
   
   func testError() {
     let expSubscriber1 = self.expectation(description: "\(#function)-subscriber1")
-    imageLoader.loadImage(url: URL(string: "file://dummy_should_fail")!, subscriber: self, success: {_ in
+    imageLoader.loadImage(url: URL(string: "file://dummy_should_fail")!, for: self, success: {_ in
       XCTFail("Should fail since the file doesnt exist")
     }, failure: {
       XCTAssertNotNil($0)
@@ -110,12 +110,12 @@ class RMImageLoaderTests: XCTestCase {
     let imageName1 = "img1.png"
     let url1 = RMImageLoaderTests.getImageURL(named: imageName1)!
     
-    imageLoader.loadImage(url: url1, subscriber: self, success: { _ in
+    imageLoader.loadImage(url: url1, for: self, success: { _ in
       XCTFail("Should not be called since we canceled the request")
     }, failure: { _ in
       XCTFail("Should not be called since we canceled the request")
     })
-    imageLoader.cancel(url: url1, forSubscriber: self)
+    imageLoader.cancel(url: url1, for: self)
     sleep(2)
   }
   
@@ -126,7 +126,7 @@ class RMImageLoaderTests: XCTestCase {
     let url1 = RMImageLoaderTests.getImageURL(named: imageName1)!
     let image1 = RMImageLoaderTests.getImage(named: imageName1)!
     
-    imageLoader.loadImage(url: url1, subscriber: self, success: {
+    imageLoader.loadImage(url: url1, for: self, success: {
       XCTAssertEqual(UIImagePNGRepresentation($0), UIImagePNGRepresentation(image1))
       expSubscriber1.fulfill()
     })
@@ -134,13 +134,13 @@ class RMImageLoaderTests: XCTestCase {
     let imageName2 = "img2.png"
     let url2 = RMImageLoaderTests.getImageURL(named: imageName2)!
     
-    imageLoader.loadImage(url: url2, subscriber: self, success: { _ in
+    imageLoader.loadImage(url: url2, for: self, success: { _ in
       XCTFail("Should not be called since we canceled the request")
     }, failure: { _ in
       XCTFail("Should not be called since we canceled the request")
     })
     
-    imageLoader.cancel(url: url2, forSubscriber: self)
+    imageLoader.cancel(url: url2, for: self)
     sleep(2)
     self.waitForExpectations(timeout: timeout, handler: nil)
   }

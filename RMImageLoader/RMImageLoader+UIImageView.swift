@@ -35,13 +35,13 @@ extension UIImageView {
   /// Discussion: When loading an URL for an imageView we should cancel the previous subscription.
   /// For the download, it's optional since we might want to show it later.
   /// Useful when reusing cells and
-  public func loadURL(url: URL, cancelPrevious: Bool? = false) {
+  public func load(url: URL, cancelPrevious: Bool? = false) {
     if let previousURL = self.url, self.urlLoaded == false, cancelPrevious == true {
-      RMImageLoader.default.cancel(url: previousURL, forSubscriber: self)
+      RMImageLoader.default.cancel(url: previousURL, for: self)
     }
     self.url = url
     self.urlLoaded = false
-    RMImageLoader.default.loadImage(url: url, subscriber: self, success: {[weak self] in
+    RMImageLoader.default.loadImage(url: url, for: self, success: {[weak self] in
       if (self?.url == url) {
         self?.image = $0
         self?.urlLoaded = true
@@ -53,6 +53,6 @@ extension UIImageView {
   
   /// Cancel the download of a specific URL for an UIImageView
   public func cancel(url: URL) {
-    RMImageLoader.default.cancel(url: url, forSubscriber: self)
+    RMImageLoader.default.cancel(url: url, for: self)
   }
 }

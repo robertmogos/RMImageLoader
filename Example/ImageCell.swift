@@ -13,6 +13,6 @@ class ImageCell: UICollectionViewCell {
   
   func load(withURL URL: URL) {
     imageView.image = nil
-    imageView.loadURL(url: URL)
+    imageView.load(url: URL)
   }
 }

@@ -36,7 +36,7 @@ class RMImageLoader {
   
   
   /// Download an URL for a subscriber
-  public func loadImage(url: URL, subscriber: AnyObject, success: @escaping Success, failure: Failure? = nil) {
+  public func loadImage(url: URL, for subscriber: AnyObject, success: @escaping Success, failure: Failure? = nil) {
     retriever.loadRequest(url: url, for: subscriber, completion: {[weak self] res in
       self?.queue.async {
         switch res {
@@ -54,7 +54,7 @@ class RMImageLoader {
     })
   }
   
-  public func cancel(url: URL, forSubscriber subscriber: AnyObject) {
+  public func cancel(url: URL, for subscriber: AnyObject) {
     queue.async { [weak self] in
       self?.retriever.cancel(url: url, for: subscriber)
     }
