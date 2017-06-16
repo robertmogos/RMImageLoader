@@ -16,7 +16,14 @@ RMImageLoader is a library for background image-loading.
 
 ## Usage
 
-###
+Add to your Podfile
+
+```swift
+pod 'RMImageLoader' 
+```
+
+In your class
+
 ```swift
 import RMImageLoader
 ```
