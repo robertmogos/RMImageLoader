@@ -58,7 +58,6 @@ class Retriever: Retrieve {
       guard let this = self else {
         return
       }
-      print("loadRequest")
       defer {
         let subscription = Subscription(subscriber: subscriber, completion: completion)
         if this.subscriptions[url] == nil {
@@ -96,7 +95,6 @@ class Retriever: Retrieve {
   /// for the same url. If that's the case, we just remove the subscription but we keep on downloading the content
   public func cancel(url: URL, for subscriber: AnyObject) {
     _ = queue.sync {
-      print("cancelRequest")
       if tasks[url] == nil {
         return
       }
