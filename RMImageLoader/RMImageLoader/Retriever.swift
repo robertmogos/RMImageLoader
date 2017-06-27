@@ -54,18 +54,11 @@ public class Retriever: Retrieve {
   /// + Note: If the url was already asked by someone else, we would just append a new subscription to the task
   /// Otherwise, we create a new dataTask and attach the subscription to it
   public func loadRequest(url: URL, for subscriber: AnyObject, completion: @escaping RetrieverCompletion) {
-    queue.sync { [weak self] in
+    queue.async { [weak self] in
       guard let this = self else {
         return
       }
-      defer {
-        let subscription = Subscription(subscriber: subscriber, completion: completion)
-        if this.subscriptions[url] == nil {
-          this.subscriptions[url] = [subscription]
-        } else {
-          this.subscriptions[url]?.append(subscription)
-        }
-      }
+      
       if (self?.subscriptions[url] != nil) {
         return
       }
@@ -87,6 +80,13 @@ public class Retriever: Retrieve {
       
       this.tasks[url] = dataTask
       dataTask.resume()
+      
+      let subscription = Subscription(subscriber: subscriber, completion: completion)
+      if this.subscriptions[url] == nil {
+        this.subscriptions[url] = [subscription]
+      } else {
+        this.subscriptions[url]?.append(subscription)
+      }
     }
   }
   
@@ -94,15 +94,15 @@ public class Retriever: Retrieve {
   /// When canceling a request for an URL and Subscriber we check to see if aren't other subscribers
   /// for the same url. If that's the case, we just remove the subscription but we keep on downloading the content
   public func cancel(url: URL, for subscriber: AnyObject) {
-    _ = queue.sync {
-      if tasks[url] == nil {
+    queue.async { [weak self] in
+      if self?.tasks[url] == nil {
         return
       }
-      if subscriptions[url] == nil {
+      if self?.subscriptions[url] == nil {
         return
       }
       
-      guard let existingSubIndex = subscriptions[url]?.index(where: {
+      guard let existingSubIndex = self?.subscriptions[url]?.index(where: {
         guard let existingSubscriber = $0.subscriber else {
           return false
         }
@@ -110,16 +110,16 @@ public class Retriever: Retrieve {
       }) else {
         return
       }
-      subscriptions[url]?.remove(at: existingSubIndex)
-      if (subscriptions[url]?.isEmpty)! {
-        let task = tasks[url]
+      self?.subscriptions[url]?.remove(at: existingSubIndex)
+      if (self?.subscriptions[url]?.isEmpty)! {
+        let task = self?.tasks[url]
         task?.cancel()
-        tasks.removeValue(forKey: url)
-        subscriptions.removeValue(forKey: url)
+        self?.tasks.removeValue(forKey: url)
+        self?.subscriptions.removeValue(forKey: url)
       }
     }
   }
-
+  
   deinit {
     session.invalidateAndCancel()
   }
